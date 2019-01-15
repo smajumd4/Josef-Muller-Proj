@@ -1,0 +1,66 @@
+body {
+  background-color: #b62f35;
+}
+.item-1 {
+  grid-area: item-1;
+}
+.item-2 {
+  grid-area: item-2;
+}
+.item-3 {
+  grid-area: item-3;
+}
+.item-4 {
+  grid-area: item-4;
+}
+.item-5 {
+  grid-area: item-5;
+}
+.item-6 {
+  grid-area: item-6;
+}
+.item-7 {
+  grid-area: item-7;
+}
+.item-8 {
+  grid-area: item-8;
+}
+.item-9 {
+  grid-area: item-9;
+}
+.item-10 {
+  grid-area: item-10;
+}
+.item-11 {
+  grid-area: item-11;
+}
+.item-12 {
+  grid-area: item-12;
+}
+
+.container {
+  height: 700px;
+  max-width: 950px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-template-rows: 40% 20% 40%;
+  grid-template-areas:
+  'item-1 item-2 item-3 item-4 item-5 item-6 item-6 item-6'
+  'item-1 item-2 item-3 item-7 item-5 item-10 item-11 item-12'
+  'item-8 item-8 item-8 item-7 item-9 item-10 item-11 item-12';
+  background-color: #b62f35;
+  border: 2px solid  #b62f35;
+}
+
+.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7, .item-8, .item-9, .item-10, .item-11, .item-12 {
+  border: 2px solid #b62f35;
+}
+
+
+.item-1, .item-2, .item-3, .item-5 {
+  background-color: #8c2832;
+}
+
+.item-7, .item-10, .item-11, .item-12 {
+  background-color: #18181a;
+}
