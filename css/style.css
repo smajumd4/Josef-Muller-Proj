@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700');
+
 /* global styles */
 
 body {
-  background-color: #b62f35;
+  background-color: black;
+  font-family: 'Muli', sans-serif;
+  color: #1a1a1a;
 }
 
 /* two boxes styles */
 .content-wrap {
-  height: 1100px;
-  max-width: 1000px;
+  height: 150vh;
+  width: 65vw;
+  padding-top: 10vh;
   background-color: #b62f35;
+  margin: auto;
+  overflow:hidden;
 }
 .wrap {
-  height: 2500px;
-
+  height: 50vw;
+  width: 70vw;
+  margin: auto;
 }
 .item-1 {
   grid-area: item-1;
@@ -46,13 +54,13 @@ body {
 }
 
 .container1, .container2 {
-  height: 25%;
-  max-width: 600px;
+  height: 23vw;
+  width: 26vw;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
 }
 .item-1, .item-2, .item-3, .item-5, .item-6, .item-8, .item-9, .item-10, .item4, .item7 {
-  border: 5px solid #b62f35;
+  border: 0.35vw solid #b62f35;
 }
 
 .item-1, .item-2, .item-3, .item-5 {
@@ -75,9 +83,108 @@ body {
 .container2 {
   grid-template-areas:
   'item-6 item-7 item-8 item-9 item-10';
-  transform: translate(360px, -180px);
+  transform: translate(15.5vw, -10vh);
 }
+
+
+.item-1, .item-2, .item-3, .item-5 {
+  -webkit-animation-name: item-1; /* Safari 4.0 - 8.0 */
+  animation-name: down;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.item-1 {
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  animation-duration: 3s;
+}
+
+.item-3 {
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-duration: 2s;
+}
+
+
+/* animation styles */
+
+@keyframes down {
+  from {transform: translateY(0);}
+  to {transform: translateY(25vw);}
+}
+
+.item-6, .item-9 {
+  -webkit-animation-name: item-1; /* Safari 4.0 - 8.0 */
+  animation-name: up;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.item-6 {
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-duration: 2s;
+}
+
+.item-8 {
+  -webkit-animation-duration: 2.5s; /* Safari 4.0 - 8.0 */
+  animation-duration: 2.5s;
+}
+
+.item-9 {
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  animation-duration: 3s;
+}
+
+.item-10 {
+  -webkit-animation-duration: 3.5s; /* Safari 4.0 - 8.0 */
+  animation-duration: 3.5s;
+}
+
+
+@keyframes up {
+  from {transform: translateY(0);}
+  to {transform: translateY(-25vw);}
+}
+
 .wrap {
   transform-origin: center;
-  transform: rotate(30deg);
+  transform: rotate(40deg);
+}
+
+/* text styles */
+.text-wrap {
+  height: 30vh;
+  width: 65vw;
+  margin: auto;
+  margin-top: 4vh;
+}
+
+.text-1 {
+  display: inline-block;
+  width: 20vw;
+  font-size: 2vw;
+  font-weight: 700;
+  margin-left: 1vw;
+}
+
+.text-1 > p {
+  margin: 0.5vh 0;
+}
+
+.para {
+  display: inline-block;
+  font-size: 0.6vw;
+  margin-left: 2.8vw;
+}
+.para-1 {
+  margin-left: 0.3vw;
+}
+.para-2 {
+  margin-left: 1.6vw;
+}
+
+.last {
+  font-size: 0.6vw;
+  margin-left: 0;
 }
